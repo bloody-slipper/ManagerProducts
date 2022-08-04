@@ -4,7 +4,6 @@ import org.jetbrains.annotations.NotNull;
 
 public class ProductManager {
     protected Repository repo;
-    protected Product[] items = new Product[0];
 
     public ProductManager(Repository repo) {
         this.repo = repo;

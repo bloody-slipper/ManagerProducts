@@ -1,7 +1,7 @@
 package Product;
 
 public class Repository {
-    private Product[] items = new Product[0];
+    protected Product[] items = new Product[0];
 
     public void save(Product item) {
         Product[] tmp = new Product[items.length + 1];

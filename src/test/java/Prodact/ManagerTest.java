@@ -49,9 +49,7 @@ public class ManagerTest {
     @Test
     public void shouldSearch0() {
 
-        manager.searchBy("пшеница");
-
-        Product[] expected = manager.searchBy("пшеница");
+        Product[] expected = {};
         Product[] actual = manager.searchBy("пшеница");
 
         Assertions.assertArrayEquals(expected, actual);
