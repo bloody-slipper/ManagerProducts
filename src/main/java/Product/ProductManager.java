@@ -1,7 +1,5 @@
 package Product;
 
-import org.jetbrains.annotations.NotNull;
-
 public class ProductManager {
     protected Repository repo;
 
@@ -19,7 +17,7 @@ public class ProductManager {
             if (matches(item, text)) {
                 Product[] tmp = new Product[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
-                    tmp[i]= result[i];
+                    tmp[i] = result[i];
                 }
                 tmp[tmp.length - 1] = item;
                 result = tmp;

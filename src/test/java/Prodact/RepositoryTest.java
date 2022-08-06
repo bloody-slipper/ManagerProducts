@@ -2,6 +2,7 @@ package Prodact;
 
 import Product.Product;
 import Product.Repository;
+import Product.NotFoundException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +41,15 @@ public class RepositoryTest {
         Product[] actual = repo.getProduct();
 
         Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindException() {
+        repo.save(product1);
+        repo.save(product2);
+        repo.save(product3);
+
+        Assertions.assertThrows(NotFoundException.class, () -> repo.removeById(55));
     }
 
 
